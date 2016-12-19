@@ -114,7 +114,7 @@ public class CliDriver {
     console = new LogHelper(LOG);
   }
 
-  public int processCmd(String cmd) {
+  public int processCmd(String cmd) { // process single hive command or sql
     CliSessionState ss = (CliSessionState) SessionState.get();
     ss.setLastCommand(cmd);
 
@@ -332,7 +332,7 @@ public class CliDriver {
     }
   }
 
-  public int processLine(String line) {
+  public int processLine(String line) { // line may contains multiple lines
     return processLine(line, false);
   }
 
