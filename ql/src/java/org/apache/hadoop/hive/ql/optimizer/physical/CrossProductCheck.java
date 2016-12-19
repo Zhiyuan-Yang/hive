@@ -91,7 +91,7 @@ public class CrossProductCheck implements PhysicalPlanResolver, Dispatcher {
       .getLogger(CrossProductCheck.class);
 
   @Override
-  public PhysicalContext resolve(PhysicalContext pctx) throws SemanticException {
+  public PhysicalContext resolve(PhysicalContext pctx) throws SemanticException { // used by TezCompiler to optimize physical plan
     TaskGraphWalker ogw = new TaskGraphWalker(this);
 
     ArrayList<Node> topNodes = new ArrayList<Node>();
