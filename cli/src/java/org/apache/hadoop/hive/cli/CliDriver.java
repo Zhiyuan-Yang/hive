@@ -178,7 +178,7 @@ public class CliDriver {
             stringifyException(e));
         ret = 1;
       }
-    }  else { // local mode
+    }  else { // local mode // run sql, not sure wtf 'local mode' means
       try {
         CommandProcessor proc = CommandProcessorFactory.get(tokens, (HiveConf) conf);
         ret = processLocalCmd(cmd, proc, ss);
