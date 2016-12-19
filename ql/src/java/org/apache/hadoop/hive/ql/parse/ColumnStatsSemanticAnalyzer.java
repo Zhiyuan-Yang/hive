@@ -52,7 +52,7 @@ import org.apache.hadoop.hive.serde2.typeinfo.TypeInfoUtils;
  * partition and a table. Note that table statistics are implemented in SemanticAnalyzer.
  *
  */
-public class ColumnStatsSemanticAnalyzer extends SemanticAnalyzer {
+public class ColumnStatsSemanticAnalyzer extends SemanticAnalyzer { // semantic analyzer of all 'analyze' query
   private static final Logger LOG = LoggerFactory
       .getLogger(ColumnStatsSemanticAnalyzer.class);
   static final private LogHelper console = new LogHelper(LOG);
