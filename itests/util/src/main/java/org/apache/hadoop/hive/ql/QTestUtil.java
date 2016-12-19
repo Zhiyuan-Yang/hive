@@ -1108,7 +1108,7 @@ public class QTestUtil {
     createSources(null);
   }
 
-  public void createSources(String tname) throws Exception {
+  public void createSources(String tname) throws Exception { // init src tables used by test (run q_test_init.sql)
     boolean canReuseSession = (tname == null) || !qNoSessionReuseQuerySet.contains(tname);
     if(!isSessionStateStarted) {
       startSessionState(canReuseSession);
