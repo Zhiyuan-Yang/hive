@@ -1125,10 +1125,10 @@ public class QTestUtil {
     }
     conf.setBoolean("hive.test.init.phase", true);
 
-    String initCommands = readEntireFileIntoString(scriptFile);
+    String initCommands = readEntireFileIntoString(scriptFile); // all hive commands in .q file
     LOG.info("Initial setup (" + initScript + "):\n" + initCommands);
 
-    int result = cliDriver.processLine(initCommands);
+    int result = cliDriver.processLine(initCommands); // processed by CliDriver
     LOG.info("Result from cliDrriver.processLine in createSources=" + result);
     if (result != 0) {
       Assert.fail("Failed during createSources processLine with code=" + result);
